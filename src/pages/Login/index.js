@@ -5,6 +5,7 @@ import { AreaInput, Background, Container, Input, Logo, SubmitButton, SubmitText
 import { AuthContext } from "../../contexts/auth";
 
 
+
 export default function Login() {
     // const { setUserId } = useUser();
     const { fazerLogin, loading } = useContext(AuthContext);
@@ -14,12 +15,12 @@ export default function Login() {
 
     function submitLogin() {
         console.log('submite', username);
-        if (username == null || password == null) {
-            return;
-        } else {
+//        if (username == null || password == null) {
+//            return;
+//        } else {
             fazerLogin(username, password);
 
-        }
+//        }
     }
 
 
