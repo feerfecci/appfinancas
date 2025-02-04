@@ -23,13 +23,17 @@ export default function AuthProvider({ children }) {
                     "password": password,
                 })
             });
+
+            const {id, name} = response.data;
             setLoading(false);
-            console.log('deu certo');
-            navigation.navigate('AllGastos');
+            console.log(response.data);
+            alert(response);
+            // navigation.navigate('Home');
 
         } catch (error) {
             setLoading(false);
-            console.log('Erro ao Fazer login', error);
+            alert('Erro ao Fazer login', error);
+            // console.log();
         }
     }
 

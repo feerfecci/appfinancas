@@ -11,11 +11,15 @@ export default function Login() {
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
 
-    
-    function submitLogin(){
-        console.log('submite');
-        if (username === '' || password === '') return;
-        fazerLogin(username,password);
+
+    function submitLogin() {
+        console.log('submite', username);
+        if (username == null || password == null) {
+            return;
+        } else {
+            fazerLogin(username, password);
+
+        }
     }
 
 
