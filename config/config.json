@@ -20,5 +20,5 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "urlRootNode": "http://192.168.15.117/baselaravel/public/api/"
+  "baseUrl": "http://192.168.0.86/baselaravel/public/api/"
 }

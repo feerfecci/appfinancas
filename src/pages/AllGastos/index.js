@@ -12,7 +12,7 @@ export default function AllGastos() {
         async function loadGastos() {
             try {
 
-                const response = await fetch(api.urlRootNode + "allgastos/" + userId, {
+                const response = await fetch(api.baseUrl + "allgastos/" + userId, {
                     method: 'get',
                     headers: {
                         Accept: 'aplication/json',

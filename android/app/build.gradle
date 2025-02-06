@@ -105,6 +105,11 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    project.ext.vectoricons = [
+    iconFontNames: [ 'FontAwesome.ttf', 'Entypo.ttf', 'Feather.ttf' ] // Adicione as fontes desejadas
+]
+
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 }
 
 dependencies {
@@ -117,3 +122,4 @@ dependencies {
         implementation jscFlavor
     }
 }
+
