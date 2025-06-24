@@ -13,14 +13,18 @@ export default function Login() {
     const [password, setPassword] = useState();
 
 
-    function submitLogin() {
-        console.log('submite', username);
-//        if (username == null || password == null) {
-//            return;
-//        } else {
-            fazerLogin(username, password);
+   async function submitLogin() {
+        // console.log('submite', username);
+       if (username == null || password == null) {
+           return;
+       } else {
+           const sucesso = await fazerLogin(username, password);
 
-//        }
+        if (!sucesso) {
+            // Mantém os campos preenchidos
+            console.log("Login falhou, mantendo os dados preenchidos");
+        }
+       }
     }
 
 
